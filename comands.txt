@@ -1,0 +1,9 @@
+mvn clean package
+
+mvn clean jacoco:prepare-agent install jacoco:report
+
+mvn jacoco:report
+
+java -jar target/planets-1.0-SNAPSHOT.jar
+
+cls && mvn clean package && java -jar target/planets-1.0-SNAPSHOT.jar
